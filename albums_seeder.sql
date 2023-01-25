@@ -1,4 +1,8 @@
 USE codeup_test_db;
+<<<<<<< HEAD
+=======
+TRUNCATE albums;
+>>>>>>> 7cb583ba2e70bb153ae9e7d25d6a2d8398a562f6
 
 TRUNCATE albums;
 INSERT INTO albums (artist, album_name, release_date, genre, sales)
