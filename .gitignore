@@ -1,8 +1,6 @@
 .idea/*
 # should be in order of class
-order_by_exercises.sql
 limit_exercises.sql
-order_by_exercises.sql
 group_by_exercises.sql
 aliases_exercises.sql
 join_exercises.sql
