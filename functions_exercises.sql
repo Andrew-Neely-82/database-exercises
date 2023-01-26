@@ -2,8 +2,8 @@ USE employees;
 
 # TODO 2:
 SELECT CONCAT(first_name, ' ', last_name) AS 'Full Names' FROM employees
-WHERE last_name LIKE 'e%'
-AND last_name LIKE '%e';
+WHERE last_name LIKE 'E%E'
+ORDER BY emp_no;
 
 # TODO 3:
 SELECT * FROM employees
