@@ -10,4 +10,4 @@ LIMIT 5;
 # TODO 4: corrected
 SELECT emp_no FROM salaries
 ORDER BY salary DESC
-LIMIT 4 OFFSET 46;
+LIMIT 5 OFFSET 45;
