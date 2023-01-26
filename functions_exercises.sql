@@ -1,26 +1,31 @@
-SELECT emp_no, last_name FROM employees
-WHERE last_name LIKE 'E%'
-AND last_name LIKE '%E'
-ORDER BY emp_no DESC;
+USE employees;
 
-SELECT CONCAT(first_name,' ',last_name) as full_name FROM employees
-WHERE last_name LIKE 'E%'
-AND last_name LIKE '%E'
-ORDER BY emp_no DESC;
+# TODO 2:
+SELECT CONCAT(first_name, ' ', last_name) AS 'Full Names' FROM employees
+WHERE last_name LIKE 'e%'
+AND last_name LIKE '%e';
 
+# TODO 3:
 SELECT * FROM employees
-WHERE birth_date = '1965-12-25';
+WHERE MONTH(birth_date) = 12
+AND DAY(birth_date) = 25;
 
+# TODO 4:
 SELECT * FROM employees
-WHERE birth_date = '1965-12-25'
-AND hire_date BETWEEN '1990-01-01' AND '1999-12-31';
+WHERE YEAR(hire_date) BETWEEN 1990 AND 1999
+AND MONTH(birth_date) = 12
+AND DAY(birth_date) = 25;
 
+# TODO 5:
 SELECT * FROM employees
-WHERE birth_date = '1965-12-25'
-AND hire_date BETWEEN '1990-01-01' AND '1999-12-31'
-ORDER BY hire_date DESC, birth_date ASC;
+WHERE YEAR(hire_date) BETWEEN 1990 AND 1999
+AND MONTH(birth_date) = 12
+AND DAY(birth_date) = 25
+ORDER BY hire_date DESC, birth_date DESC;
 
-SELECT emp_no, CONCAT(first_name,' ',last_name) as full_name, DATEDIFF(NOW(),hire_date) as days_worked FROM employees
-WHERE birth_date = '1965-12-25'
-AND hire_date BETWEEN '1990-01-01' AND '1999-12-31'
-ORDER BY hire_date DESC, birth_date ASC;
+# TODO 6:
+SELECT CONCAT(first_name,' ',last_name)
+AS 'Name', DATEDIFF(CURDATE(),hire_date) AS 'Days Worked' FROM employees
+WHERE YEAR(hire_date) BETWEEN 1990 AND 1999
+AND MONTH(birth_date) = 12 AND DAY(birth_date) = 25
+ORDER BY hire_date DESC, birth_date DESC;
