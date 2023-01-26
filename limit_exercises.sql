@@ -7,7 +7,7 @@ SELECT emp_no FROM salaries
 ORDER BY salary DESC
 LIMIT 5;
 
-# TODO 4: curriculum might be wrong?
+# TODO 4: corrected
 SELECT emp_no FROM salaries
 ORDER BY salary DESC
-LIMIT 5 OFFSET 45;
+LIMIT 4 OFFSET 46;
