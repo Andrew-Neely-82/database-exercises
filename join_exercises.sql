@@ -20,7 +20,7 @@ FROM employees AS e
 WHERE dm.to_date = '9999-01-01' AND e.gender = 'F'
 ORDER BY d.dept_name;
 
-# TODO 4:
+# TODO 4: first 2 rows in total needs work
 SELECT t.title, COUNT(t.title) as Total
 FROM employees e
          JOIN titles t ON e.emp_no = t.emp_no
@@ -30,7 +30,7 @@ WHERE d.dept_name = 'Customer Service' AND t.to_date = '9999-01-01'
 GROUP BY t.title
 ORDER BY Total DESC;
 
-# TODO 5:
+# TODO 5: limit repeating info
 SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS dept_manager, s.salary
 FROM departments d
          JOIN dept_manager dm ON d.dept_no = dm.dept_no
