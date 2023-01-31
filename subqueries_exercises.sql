@@ -9,8 +9,7 @@ SELECT title AS 'Title', emp_no AS 'Employee #' FROM titles
 WHERE emp_no IN (SELECT emp_no FROM employees WHERE first_name = 'Aamod');
 
 # TODO 3:
-SELECT first_name, last_name
-FROM employees e
+SELECT first_name, last_name FROM employees e
 WHERE e.gender = 'F' AND e.emp_no in (SELECT emp_no FROM dept_manager WHERE to_date = '9999-01-01');
 
 # TODO Bonus 1:
